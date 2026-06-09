@@ -5,7 +5,6 @@ import sys
 
 
 if __name__ == "__main__":
-    """Connect to MySQL and fetch all states ordered by id."""
     conn = MySQLdb.connect(
         host="localhost",
         port=3306,
