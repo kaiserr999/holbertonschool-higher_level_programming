@@ -14,9 +14,7 @@ if __name__ == "__main__":
         charset="utf8"
     )
     cur = conn.cursor()
-    cur.execute(
-        "SELECT * FROM states WHERE name >= 'N' AND name < 'O' ORDER BY id ASC"
-    )
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
     for row in cur.fetchall():
         print(row)
     cur.close()
