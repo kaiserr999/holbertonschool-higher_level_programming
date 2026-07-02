@@ -5,7 +5,7 @@ import csv
 import json
 import os
 
-from flask import Flask, abort, render_template, request
+from flask import Flask, render_template, request
 
 
 app = Flask(__name__)
@@ -48,6 +48,7 @@ def products():
     source = request.args.get('source', 'json')
     product_id = request.args.get('id')
     base_dir = os.path.dirname(__file__)
+    error = None
 
     if source == 'json':
         file_path = os.path.join(base_dir, 'products.json')
@@ -56,20 +57,20 @@ def products():
         file_path = os.path.join(base_dir, 'products.csv')
         products_list = load_csv_products(file_path)
     else:
-        abort(404, description='Source not found')
+        return render_template('product_display.html', products=[], error='Wrong source')
 
     if product_id is not None:
         try:
             product_id = int(product_id)
         except ValueError:
-            abort(404, description='Product not found')
+            return render_template('product_display.html', products=[], error='Product not found')
 
         products_list = [product for product in products_list if product.get('id') == product_id]
 
         if not products_list:
-            abort(404, description='Product not found')
+            return render_template('product_display.html', products=[], error='Product not found')
 
-    return render_template('product_display.html', products=products_list, source=source)
+    return render_template('product_display.html', products=products_list, source=source, error=error)
 
 
 if __name__ == '__main__':
