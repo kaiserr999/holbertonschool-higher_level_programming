@@ -1,0 +1,7 @@
+{
+  "products": [
+    {"id": 1, "name": "Laptop", "category": "Electronics", "price": 999.99},
+    {"id": 2, "name": "Notebook", "category": "Stationery", "price": 4.5},
+    {"id": 3, "name": "Coffee Mug", "category": "Kitchen", "price": 12.0}
+  ]
+}
