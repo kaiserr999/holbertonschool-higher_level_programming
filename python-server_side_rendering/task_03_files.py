@@ -16,7 +16,13 @@ def load_json_products(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         data = json.load(file)
 
-    return data.get('products', [])
+    if isinstance(data, list):
+        return data
+
+    if isinstance(data, dict):
+        return data.get('products', [])
+
+    return []
 
 
 def load_csv_products(file_path):
