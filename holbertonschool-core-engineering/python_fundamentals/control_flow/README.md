@@ -1,22 +1,56 @@
 # Control Flow
 
-This project focuses exclusively on control flow using:
-- `if`, `elif`, `else`
-- Comparison operators
-- Boolean logic
-- `while` loops
-- `for` loops with `range()`
+> Python exercises for conditionals, loops, and simple decision making.
 
-## Learning Objectives
-By the end of this project, you should be able to:
-- Write conditional statements using `if`, `elif`, and `else`.
-- Use comparison and logical operators correctly.
-- Control repetition using `while` and `for` loops.
-- Reason about loop boundaries and iteration ranges.
-- Generate formatted output using numeric iteration.
-- Combine conditions and loops to produce deterministic output.
+## Description & Objectives
+
+This project focuses on Python control flow. The tasks practice branching with `if`, `elif`, and `else`, repetition with `while` and `for`, and output formatting based on conditions.
+
+## Technologies Used
+
+| Tool | Purpose |
+| --- | --- |
+| Python 3 | Language used for the exercises |
+| Standard library | Random values and console output |
+
+## Prerequisites
+
+- Python 3.10 or newer
+- A terminal capable of running Python scripts
+
+## Installation
+
+No installation is required. Open the project folder and run the script directly.
+
+## Usage
+
+```bash
+python3 positive_or_negative.py
+```
+
+Example output:
+
+```text
+9 is positive
+0 is zero
+-2 is negative
+```
+
+## Features
+
+- Conditional branching
+- Loop control with `while` and `for`
+- Comparison and boolean operators
+- Formatted console output
 
 ## Tasks
-### 0. Positive anything is better than negative nothing
-Assigns a random integer to a variable `number` and prints whether it is positive, zero, or negative.
-File: `positive_or_negative.py`
+
+The main exercise is [positive_or_negative.py](positive_or_negative.py), which classifies a random number as positive, zero, or negative.
+
+## Documentation Standard
+
+Python files in this project follow [PEP 257](https://peps.python.org/pep-0257/) docstrings for modules, functions, and classes.
+
+## Contributions & Thanks
+
+Part of the Holberton School Python fundamentals curriculum. Contributions should keep the exercises small and readable.
