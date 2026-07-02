@@ -1,5 +1,57 @@
 # Holbertonschool Core Engineering
 
+> Foundational Python exercises, environment demos, and learning notes for core engineering topics.
+
+## Description & Objectives
+
+This repository groups the early Python learning material used to practice control flow, virtual environment isolation, and formatted output. It serves as a small documentation-first project and a reference for the training workflow.
+
+## Technologies Used
+
+| Tool | Purpose |
+| --- | --- |
+| Python 3 | Exercises and environment demos |
+| `venv` | Virtual environment isolation examples |
+| Standard library modules | Random numbers, print formatting, and control flow |
+
+## Prerequisites
+
+- Python 3.10 or newer
+- A POSIX-like shell or Windows terminal that can run Python commands
+- No third-party packages are required for the included exercises
+
+## Installation
+
+No installation is needed. Clone the repository and move into the project folder.
+
+```bash
+cd holbertonschool-core-engineering
+```
+
+## Usage
+
+Run the exercises directly from their folders:
+
+```bash
+python3 python_fundamentals/control_flow/positive_or_negative.py
+python3 venv_isolation_demo.py
+```
+
+## Features
+
+- Small Python exercises with clear output
+- Virtual environment isolation demos
+- Introductory control-flow practice
+- Documentation-first organization
+
+## Documentation Standard
+
+Python files in this repository follow [PEP 257](https://peps.python.org/pep-0257/) docstrings for modules, functions, and classes.
+
+## Contributions & Thanks
+
+Built for Holberton School core engineering training. Thanks to the curriculum authors and reviewers.# Holbertonschool Core Engineering
+
 A repository containing foundational Python programming exercises and learning materials for core engineering concepts.
 
 ## Project Structure
