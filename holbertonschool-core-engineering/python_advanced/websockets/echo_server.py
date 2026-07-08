@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """WebSocket echo server."""
 
 import asyncio
@@ -6,7 +6,7 @@ import asyncio
 import websockets
 
 
-async def echo(websocket, path=None):
+async def handler(websocket, path):
     """Echo back every received text message."""
     async for message in websocket:
         await websocket.send(message)
@@ -14,7 +14,7 @@ async def echo(websocket, path=None):
 
 async def main():
     """Start the echo server."""
-    async with websockets.serve(echo, "localhost", 8765):
+    async with websockets.serve(handler, "localhost", 8765):
         await asyncio.Future()
 
 
